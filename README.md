@@ -1,0 +1,1 @@
+AngularJS Webpack ES6 boilerplate.
