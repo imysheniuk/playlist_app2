@@ -1,1 +1,1 @@
-AngularJS Webpack ES6 boilerplate.
+AngularJS Webpack ES6 boilerplate.  

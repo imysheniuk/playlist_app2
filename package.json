@@ -11,6 +11,7 @@
   "devDependencies": {
     "angular-mocks": "^1.5.0",
     "babel-core": "^6.7.7",
+    "babel-eslint": "^7.2.1",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-runtime": "^6.7.5",
     "babel-polyfill": "^6.7.4",
@@ -23,6 +24,7 @@
     "connect-history-api-fallback": "^1.1.0",
     "css-loader": "^0.19.0",
     "del": "^2.2.0",
+    "eslint": "^3.18.0",
     "fs-walk": "0.0.1",
     "html-webpack-plugin": "^1.7.0",
     "karma": "^0.13.22",
@@ -50,7 +52,7 @@
   },
   "scripts": {
     "build": "./node_modules/webpack/bin/webpack.js -p",
-    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --open",
     "test": "karma start"
   },
   "keywords": [

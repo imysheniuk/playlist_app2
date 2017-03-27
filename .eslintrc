@@ -1,0 +1,173 @@
+{
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 6,
+		"allowImportExportEverywhere": true
+	},
+	"env": {
+		"browser": true,
+		"jasmine": true,
+		"es6": true
+	},
+	"extends": "eslint:recommended",
+	"globals": {
+		// These are global objects and functions that you can use without ESLint complaining about it.
+		// The false mean that the objects and functions are read-only. Trying to assign a new value to them will
+		// cause ESLint to raise an error.
+		"$": false,
+		"Cookies": false,
+		"gettext": false,
+		"ngettext": false,
+		"interpolate": false,
+		"get_format": false,
+		"gettext_noop": false,
+		"pgettext": false,
+		"npgettext": false,
+		"pluralidx": false,
+		"jQuery": false,
+		"vf": false,
+		"ga": false,
+		"equalizeBoxHeight": false,
+		"DIALOG_OK": false,
+		"DIALOG_YES_NO": false,
+		"DIALOG_CLOSE": false,
+		"ZeroClipboard": false,
+		"angular": false,
+		"customerZone": false,
+		"jim": false,
+		// angular testing globals
+		"inject": false
+	},
+	"rules": {
+		// Use 4 spaces as indentation.
+		"indent": [
+			"error",
+			4
+		],
+		// Use UNIX style line endings (\n).
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		// Use single quotes, except when you need to prevent escaping a single quote.
+		"quotes": [
+			"error",
+			"single",
+			{
+				"avoidEscape": true
+			}
+		],
+		// Always enforce semicolons where they are valid.
+		"semi": [
+			"error",
+			"always"
+		],
+		// Always require the use the type-safe equality operators === and !== instead of == and !=.
+		"eqeqeq": "error",
+		// Always require the radix parameter when using parseInt().
+		"radix": "error",
+		// Always wrap an IIFE on the outside.
+		// Valid: (function() {...}());
+		// Invalid: (function() {...})();
+		"wrap-iife": [
+			"error",
+			"outside"
+		],
+		// All of our files are required to be strict.  We never concatenate with "foreign" (possibly sloppy) code.
+		"strict": [
+			"error",
+			"global"
+		],
+		// Disallow spaces between array brackets and other tokens.
+		"array-bracket-spacing": [
+			"error",
+			"never"
+		],
+		// Requires spacing inside single-line blocks.
+		// Valid: if (foo) { bar = 0; }
+		// Invalid: if (foo) {bar = 0;}
+		"block-spacing": [
+			"error",
+			"always"
+		],
+		// Require the opening brace of a block is placed on the same line as its corresponding statement or
+		// declaration. The else statements in an if-else construct, as well as catch and finally, must be on its own
+		// line after the preceding closing brace.
+		// of course we all know the one true brace style is K&R
+		"brace-style": [
+			"error",
+			"stroustrup",
+			{
+				"allowSingleLine": true
+			}
+		],
+		// Require camelcasing in names. Underscores in names are only valid for constants (THIS_IS_A_CONSTANT).
+		"camelcase": "error",
+		// Disallow a space before a comma, require a space after a comma.
+		"comma-spacing": [
+			"error",
+			{
+				"before": false,
+				"after": true
+			}
+		],
+		// Disallows spaces inside computed property brackets.
+		// Valid: obj[foo]
+		// Invalid: obj[ foo ]
+		"computed-property-spacing": [
+			"error",
+			"never"
+		],
+		// Require files to an newline at the end of non-empty files.
+		"eol-last": "error",
+		// Disallows spaces between the key and the colon in object literals.
+		// Requires at least one space between the colon and the value in object literals.
+		// Valid: var obj = {'foo': 42}
+		// Invalid: var obj = {'foo' :42}
+		"key-spacing": "error",
+		// Requires at least one space before keywords and requires at least one space after keywords.
+		// Valid: if (foo)
+		// Invalid: if(foo)
+		"keyword-spacing": "error",
+		// Maximum line length of 120 characters, except when the line contains "gettext(".
+		"max-len": [
+			"error",
+			{
+				"code": 120,
+				"ignorePattern": "gettext\\("
+			}
+		],
+		// Maximum of 2 subsequent empty lines. No empty line at the beginning of a file. Exactly one empty line at
+		// the end of a file.
+		"no-multiple-empty-lines": [
+			"error",
+			{
+				"max": 2,
+				"maxEOF": 1,
+				"maxBOF": 0
+			}
+		],
+		// Disallows trailing spaces.
+		"no-trailing-spaces": "error",
+		// Disallows spaces inside of curly braces in objects.
+		// Valid: var obj = {'foo': 'bar', 'baz': {'foo': 'qux'}}
+		// Invalid: var obj = { 'foo': 'bar', 'baz': { 'foo': 'qux' } }
+		"object-curly-spacing": [
+			"error",
+			"never"
+		],
+		// We need to be able to expose our angular module itself
+		// For mocking, it is something preferred to mimick the signature of the original function, even if the
+		// arguments are effectively unused.
+		"no-unused-vars": [
+			"warn",
+			{
+				"vars": "all",
+				"varsIgnorePattern": "customerZone",
+				"args": "none",
+				"ignoreRestSiblings": false
+			}
+		]
+	}
+}
