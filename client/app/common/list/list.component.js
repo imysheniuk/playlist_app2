@@ -9,4 +9,5 @@ let listComponent = {
     controller
 };
 
+
 export default listComponent;

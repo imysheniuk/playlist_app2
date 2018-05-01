@@ -1,17 +1,36 @@
+<div ng-app="list">
 <section class="list">
-  <!-- <h1>Angular webpack ES6 starter (your list is here)</h1>
-  <h3>You can find my test inside {{ $ctrl.name }}.html</h3> -->
-  <ul id="unstyled" class="song_list">
+
+  <!-- <ul>
     <li ng-repeat="song in songs">
-      <ul id="unstyled">
-        <li>{{song.name}}</li>
-        <li class="onee">
+      <ul>
+        <li><p>{{ $ctrl.songs[0].name }}</p></li>
+        <li>
           <audio src="{{song.adress}}" controls loop id="audioPlayer">song here</audio>
-        </li>
-        <li class="onee">
-            <button type="button" class="btn btn-dark" ng-click="removeItem(song)">X</button>
         </li>
       </ul>
     </li>
+  </ul> -->
+
+
+  <ul id="unstyled" class="song_list">
+    <li>
+      <ul id="unstyled">
+        <li>{{ $ctrl.songs[0].name }}</li>
+        <li class="onee">
+          <audio src="{{ $ctrl.songs[0].adress }}" controls loop id="audioPlayer">song here</audio>
+        </li>
+        <li class="onee">
+          <button type="button" class="btn btn-dark" ng-click="removeItem(song)">X</button>
+        </li>
+      </ul>
+    </li>
+    
   </ul>
+    <h1>Angular webpack ES6 starter</h1>
+    <h3>You can find me  test inside {{ $ctrl.songs[0].name }}.html</h3>
+    <h3>You can find me  test inside {{ $ctrl.songs[0].adress }}</h3>
+  
+
 </section>
+</div>
