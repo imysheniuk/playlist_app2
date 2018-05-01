@@ -1,0 +1,17 @@
+<section class="list">
+  <!-- <h1>Angular webpack ES6 starter (your list is here)</h1>
+  <h3>You can find my test inside {{ $ctrl.name }}.html</h3> -->
+  <ul id="unstyled" class="song_list">
+    <li ng-repeat="song in songs">
+      <ul id="unstyled">
+        <li>{{song.name}}</li>
+        <li class="onee">
+          <audio src="{{song.adress}}" controls loop id="audioPlayer">song here</audio>
+        </li>
+        <li class="onee">
+            <button type="button" class="btn btn-dark" ng-click="removeItem(song)">X</button>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</section>

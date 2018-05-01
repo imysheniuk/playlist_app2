@@ -9,4 +9,7 @@ let heroComponent = {
     controller
 };
 
+
+
+
 export default heroComponent;
